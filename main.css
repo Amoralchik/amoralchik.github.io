@@ -1,0 +1,154 @@
+body {
+	font-size: 16px;
+	font-family: "JetBrains Mono", Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0 auto;
+	background-color: #dfe0e2;
+	color: #071013;
+}
+
+main {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	margin: 32px;
+	position: relative;
+}
+
+.container {
+	display: block;
+	flex-direction: column;
+	align-content: stretch;
+	padding: 0 8px;
+}
+
+.navigation {
+	margin: 64px;
+	position: fixed;
+	z-index: 2;
+}
+
+.title_main {
+	display: flex;
+	align-items: flex-start;
+	align-content: center;
+}
+
+.title {
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
+}
+
+.title_main::after {
+	display: block;
+	content: "";
+	height: 18rem;
+	width: 4px;
+	margin: 0px 128px;
+	align-self: flex-start;
+	background: #ff4785;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+section {
+	margin: 14px auto;
+}
+
+section::after {
+	display: block;
+	content: "";
+	height: 4px;
+	margin: 32px auto;
+	align-self: auto;
+	width: 6rem;
+	background: #ff85a5;
+}
+
+a {
+	color: #ff4785;
+}
+
+img {
+	border-radius: 50%;
+	min-width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	object-fit: cover;
+}
+
+h1 {
+	font-weight: 300;
+}
+
+h2 {
+	font-family: monospace;
+}
+
+p {
+	max-width: 800px;
+}
+
+table {
+	border: 2px solid;
+	border-collapse: collapse;
+}
+
+td,
+th {
+	text-align: center;
+	padding: 1vh;
+	border-bottom: 1px solid;
+}
+
+footer {
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+b {
+	color: #ff4785;
+}
+
+li {
+	letter-spacing: 1px;
+}
+
+@media (max-width: 1888px) {
+	.navigation {
+		margin: 64px auto;
+		position: static;
+	}
+	.title_main {
+		justify-content: center;
+	}
+	nav {
+		display: flex;
+		flex-direction: row;
+		align-content: center;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.title_main::after {
+		display: none;
+	}
+}
+
+@media (max-width: 720px) {
+	main {
+		display: block;
+		flex-flow: unset;
+		align-items: unset;
+		margin: 32px;
+		position: relative;
+	}
+
+	section#Skills {
+		display: none;
+	}
+}
